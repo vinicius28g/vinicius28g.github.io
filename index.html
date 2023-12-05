@@ -66,17 +66,31 @@
       <!-- ------------------------------- primeiro deafio  ------------------------------------- -->
       <div style="text-align: center; width: 80%;  margin: 0 auto">
           <p>
-            <b>1º Desafio: </b>você tera que procurar no caça palarvras 3 palavras que estao relacionadas a um <b>endereço</b> <br>
+            <b>1º Desafio: </b>você terá que procurar no caça palavras 3 palavras que estão relacionadas a um <b>endereço</b> <br>
           </p>
           <img src="img/caca-palavra.png" alt="caca-palavra" style="width: 50%; margin: 0 auto; padding-bottom: 20px;">
-          <form style="text-align: left; width: 80%; margin: 0 auto;">
-            <div class="mb-3">
-              <label class="form-label" for="email"><b>Coloque as plavras em ordem:</b></label>
-              <input type="text" class="form-control" id="pergunta1" aria-describedby="emailHelp" style="width: 50%; border: solid black;">
+          <form style="text-align: left; width: 80%; margin: 0 auto;" action="javascript:void(0);" onsubmit="desafio1(); return false;">
+            <div class="mb-3" >
+              <label class="form-label" for="email"><b>Coloque as palavras em ordem:</b></label>
+              <input type="text" class="form-control" id="input1" aria-describedby="emailHelp" style="width: 50%; border: solid black;">
             </div>
-            <button type="submit"  class="btn btn-primary">Tentar a sorte!!</button>
+            <button type="submit" class="btn btn-primary">Tentar a sorte!!</button>
           </form>
           <br>
+          <div style="display: none;">
+            <p class="d-inline-flex gap-1">
+              <button id="collapse01" type="button" data-bs-toggle="collapse" data-bs-target="#resposta01" aria-expanded="false" aria-controls="resposta01"></button>
+            </p>
+          </div>
+          <div class="collapse" id="resposta01">
+            <div class="card card-body">
+              Menina inteligente!! &#128513;&#128513;<br>
+              senha:qw123456789
+            </div>
+          </div>
+          <div id="erro01" style="display: none;">
+            Tente de novo bb, não foi dessa vez! &#128542;&#128542;
+          </div>
       </div>
 <!-- ------------------------------- segundo deafio  ------------------------------------- -->
     <div style="text-align: left; width: 67%;  margin: 0 auto">
@@ -102,13 +116,13 @@
     <!-- ------------------------------- terceiro deafio  ------------------------------------- -->
     <div style="text-align: center; width: 80%;  margin: 0 auto">
       <p>
-        <b>3º Desafio: </b>Ta pensando que a vida é facil! Sonhou iludida kkk. Mostre ao seu namorado que você é sim, uma mulher esperta e com o QI acima da média e vença o game kkkk
+        <b>3º Desafio: </b>Tá pensando que a vida é fácil! Sonhou iludida kkk. Mostre ao seu namorado que você é sim, uma mulher esperta e com o QI acima da média e vença o game kkkk
       </p>
       <a class="btn btn-primary " role="button" href="https://puzzel.org/pt/jigsaw/play?p=-NkgxIZoUIgls9SbmU4u" style="width: 20%;">
        <img src="img/play.png" alt="play" width="30" height="30"> Play
       </a>
       <br>
-      <form style="text-align: left; width: 80%; margin: 0 auto; margin-top: 20px;">
+      <form style="text-align: left; width: 80%; margin: 0 auto; margin-top: 20px;" action="javascript:void(0);" onsubmit="desafio3(); return false;">
         <div class="mb-3">
           <label class="form-label" for="email"><b>A foto é de boa, quero ver se tu é boa de data mesmo. Me diga o dia da foto</b></label>
           <input type="date" class="form-control" id="desafio03" aria-describedby="emailHelp" style="width: 50%; border: solid black;">
@@ -116,15 +130,20 @@
         <button type="submit"  class="btn btn-primary">Tentar a sorte!!</button>
       </form>
       <br>
-      <div id="premo03" style="display: none;">
-        <a role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-          <img src="img/desafio3-quebra-cabeca.jpeg" alt="desafio3-quebra-cabeca" width="30%">
-        </a>
+      <div id="premo03"  style="display: none;">
+        <p class="d-inline-flex gap-1">
+          <a  data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            <img src="img/desafio3-quebra-cabeca.jpeg" alt="desafio3-quebra-cabeca" width="30%">
+          </a>
+        </p>
         <div class="collapse" id="collapseExample">
-          <div class="well">
-            Acho que não tem frase ou texto que justifique a emoção que eu sentir nesse dia, n tem palavra que explique a energia que essa foto trás pra min, ela é a motivação pra min melhorar mais e mais, pra min ter um salário melhor, só pra repetir esse dia com vc, viajar com vc foi uma das melhores experiência da minha vida, e eu quero muito muito muito repetir essa viagem novamente se Deus permitir agente vai viajar esse final de ano, n importa o lugar mas vamo fica junto. Te amo muito, muito, muito.
+          <div class="card card-body">
+            Acho que não tem frase ou texto que justifique a emoção que eu sentir nesse dia, não tem palavra que explique a energia que essa foto trás pra min, ela é a motivação pra min melhorar mais e mais, pra min ter um salário melhor, só pra repetir esse dia com vc, viajar com vc foi uma das melhores experiência da minha vida, e eu quero muito, muito, muito, repetir essa viagem novamente. Se Deus permitir a gente vai viajar esse final de ano, não importa o lugar mas vamos fica junto. Te amo muito, muito, muito.
           </div>
         </div>
+      </div>
+      <div id="erro03" style="display: none;">
+        Tente de novo bb, não foi dessa vez! &#128542;&#128542;
       </div>
       <!-- ------------------------------- quarto deafio  ------------------------------------- -->
     <div style="text-align: left; width: 80%;  margin: 0 auto">
@@ -138,7 +157,7 @@
       </div>
      
       <p>
-         <b>Você foi em festas comigo, chegou em casa de madrugada e fez varias outras coisas que te tiram da sua zona de conforto. Chegou minha vez, me indica um livro que eu vou ler, so que ele tem que ser pequeno em media 200 paginas, o tema você escolhe - me surpreenda-</b>
+         <b>Você foi em festas comigo, chegou em casa de madrugada e fez várias outras coisas que te tiram da sua zona de conforto. Chegou minha vez, me indica um livro que eu vou ler, só que ele tem que ser pequeno em média 200 páginas, o tema você escolhe - me surpreenda-</b>
       </p>
       <hr>
     </div>
@@ -151,11 +170,11 @@
         </p>
     
         <p>
-           <b>Pegando essa ideia de diferença, procure o tesouro e descubr a senha, ela estarar na ponta do seu nariz. <br>
+           <b>Pegando essa ideia de diferença, procure o tesouro e descubra a senha, ela estará na ponta do seu nariz. <br>
             Dica: Google, 11 de outubro de 2006.
           </b>
         </p>
-        <form style="text-align: left; width: 80%; margin: 0 auto;">
+        <form style="text-align: left; width: 80%; margin: 0 auto;" action="javascript:void(0);" onsubmit="desafio5(); return false;">
           <div class="mb-3">
             <label class="form-label" for="email"><b>insira a senha:</b></label>
             <input type="text" class="form-control" id="desafio05" aria-describedby="emailHelp" style="width: 50%; border: solid black;">
@@ -165,6 +184,7 @@
         
       </div>
       <div id="video" style="text-align: center; display: none;">
+        <p>Muito bem meu amor, aproveite o video</p>
         <video controls  class="video" style="width: 20%;">
           <source src="img/lv_0_20231203163805.mp4" type="video/mp4">
           <object>
@@ -174,56 +194,60 @@
           Formato não suportado  
         </video>
       </div>
+      <div id="erro05" style="display: none;">
+        Tente de novo bb, não foi dessa vez! &#128542;&#128542;
+      </div>
 
       <!-- ------------------------------- sexto deafio  ------------------------------------- -->
     <div style="text-align: center; width: 80%;  margin: 0 auto">
       <hr>
       <p style="text-align: left;">
-        <b>6º Desafio: </b>vamo ver se tu é realmente uma boa leitora! vença o game e insira sua nota.
+        <b>6º Desafio: </b>vamos ver se tu é realmente uma boa leitora! vença o game e insira sua nota.
       </p>
       <a class="btn btn-primary " role="button" href="https://rachacuca.com.br/quiz/172399/a-selecao-ix/" style="width: 20%;">
        <img src="img/play.png" alt="play" width="30" height="30"> Play
       </a>
       <br>
-      <form style="text-align: left; width: 80%; margin: 0 auto; margin-top: 20px;">
+      <form style="text-align: left; width: 80%; margin: 0 auto; margin-top: 20px;" action="javascript:void(0);" onsubmit="desafio6(); return false;">
         <div class="mb-3">
-          <label class="form-label" for="email"><b>vamo ver se tu é boa mesmo &#128540; &#128520; Nota:</b></label>
-          <input type="number" class="form-control" id="desafio03" aria-describedby="emailHelp" style="width: 50%; border: solid black;">
+          <label class="form-label" for="email"><b>vamos ver se tu é boa mesmo &#128540; &#128520; Nota:</b></label>
+          <input type="number" class="form-control" id="desafio06" aria-describedby="emailHelp" style="width: 50%; border: solid black;">
         </div>
         <button type="submit"  class="btn btn-primary">Tentar a sorte!!</button>
       </form>
-      <br>
-      <div id="erro6" style="background-color: rgb(227, 86, 86); display: none;">
-        <p>Tente novamente &#128542;</p>
-      </div>
-      <div id="premio6" style="display: none;">
-        <p style="text-align: left;">Eu sabia, vc é muito boa &#128520; &#128572;</p>
-        <p style="text-align: left;">Agora seja saiba em sua decisão, você poderar escolher o que agente vai fazer em um dia das ferias. Você escolhe o dia e o lugar</p>
-        <form style="text-align: left; width: 80%; margin: 0 auto; margin-top: 20px;">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-              1 dia de leitura com sorvete!
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-            <label class="form-check-label" for="flexCheckChecked">
-              um B &#128520;T maravilhoso pra min, por ter feito esse site &#129392;
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-              1 dia de leitura com sorvete + um B &#128520;T maravilhoso pra min  &#129392; &#129392;.
-            </label>
-          </div>
-          <br>
-          <button type="submit"  class="btn btn-primary">confirmar</button>
-        </form>
-      </div>
     </div>
-
+    <br>
+    <div id="erro6" style="background-color: rgb(227, 86, 86); display: none;">
+      <p>haaa, pensava que tu era melhor kkk.Tente novamente &#128542;</p>
+    </div>
+    <div id="premio6" style="display: none;">
+      <p style="text-align: left;">Eu sabia, você é muito boa &#128520; &#128572;</p>
+      <p style="text-align: left;">Agora seja saiba em sua decisão, você poderá escolher o que a gente vai fazer em um dia das férias. Você escolhe o dia e o lugar</p>
+      <form style="text-align: left; width: 80%; margin: 0 auto; margin-top: 20px;">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            1 dia de leitura com sorvete!
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+          <label class="form-check-label" for="flexCheckChecked">
+            um B &#128520;T maravilhoso pra min, por ter feito esse site &#129392;
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            1 dia de leitura com sorvete + um B &#128520;T maravilhoso pra min  &#129392; &#129392;.
+          </label>
+        </div>
+        <br>
+        <button type="submit"  class="btn btn-primary">confirmar</button>
+      </form>
+    </div>
+    
+      <!-- ------------------------------- setimo deafio  ------------------------------------- -->
     <div style="text-align: left; width: 80%;  margin: 0 auto">
       <hr>
       <br>
@@ -235,11 +259,11 @@
       </div>
      
       <p style="text-align: justify;">
-         <b>Essa é uma playlist que agente tinha feito a muito tempo para colocar musicas que lembravam um ao outro. A ideia agora é a mesma so que além de musicas que gostamos colocasemos musicas que lembram lugares pessoas inportantes ou sei la, algo que traga nostalgia. assim quando a gente tiver longe podemos lembrar de momentos e matar um pouco da saudade.</b>
+         <b>Essa é uma playlist que a gente tinha feito a muito tempo para colocar músicas que lembravam um ao outro. A ideia agora é a mesma, só que além de músicas que gostamos, colocarmos músicas que lembram lugares, pessoas importantes ou sei lá, algo que traga nostalgia. Assim, quando a gente tiver longe, podemos lembrar de momentos e matar um pouco da saudade.</b>
       </p>
       <hr>
     </div>
-
+    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
